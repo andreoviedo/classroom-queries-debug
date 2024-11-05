@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  get("/", { :controller => "departments", :action => "index" })
+  get("/", { :controller => "department", :action => "index" })
 
   #------------------------------
   # Department routes
 
   get("/departments", { :controller => "department", :action => "index" })
   
-  get("/departments/:path_id", { :controller => "departments", :action => "show" })
+  get("/departments/:path_id", { :controller => "department", :action => "show" })
 
-  post("/insert_department", { :controller => "departments", :action => "create" })
+  post("/insert_department", { :controller => "department", :action => "create" })
 
-  get("/departments", { :controller => "departments", :action => "index" })
+  get("/departments", { :controller => "department", :action => "index" })
   
-  post("/modify_department/:path_id", { :controller => "departments", :action => "update" })
+  post("/modify_department/:path_id", { :controller => "department", :action => "update" })
 
-  get("/delete_department/:path_id", { :controller => "departments", :action => "destroy" })
+  get("/delete_department/:path_id", { :controller => "department", :action => "destroy" })
 
   #------------------------------
   # Course routes
@@ -23,11 +23,11 @@ Rails.application.routes.draw do
   
   get("/courses/:path_id", { :controller => "courses", :action => "show" })
 
-  get("/insert_course", { :controller => "courses", :action => "create" })
+  post("/insert_course", { :controller => "courses", :action => "create" })
 
-  get("/courses", { :controller => "courses_controller", :action => "index" })
+  get("/courses", { :controller => "courses", :action => "index" })
   
-  get("/modify_course/:path_id", { :controller => "courses", :action => "update" })
+  post("/modify_course/:path_id", { :controller => "courses", :action => "update" })
 
   get("/delete_course/:path_id", { :controller => "courses", :action => "destroy" })
 
